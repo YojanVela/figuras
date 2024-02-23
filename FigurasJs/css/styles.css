@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    background: url("../img/fondo.jpg");
+    background-size: cover;
+}
+
+/* Estilo section */
+
+section{ 
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding-bottom: 100px;
+}
+
+.fila{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.col-izq, .col-der{
+    width: 50%;
+    border: 1px solid #fff;
+    background: #24779345;
+    padding: 15px;
+    margin: 0 auto;
+    height: 500px;
+}
+
+h2{
+    font-size: 40px;
+    color: #fff;
+    padding: 20px;
+}
+
+.fila button{
+    padding: 8px 20px;  
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    margin: 10px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor:pointer;
+    transition: .5s;
+}
+
+button:hover{
+    background: rgba(63, 63, 193, 0.76);
+    transform: scale(0.9);
+}
+
+#figura{
+    width: 210px;
+    height: 210px;
+    background: #fff;
+    margin: 70px auto;
+    transition: 1s;
+}
+
+#figura.circulo{
+    border-radius: 50%;
+    background: #ff5722; 
+    transform: scale(1.5) rotate(360deg);
+}
+
+#figura.rectangulo{
+    width: 310px;
+    background: #4caf50; 
+}
+
+#figura.degradado{
+    background-image: linear-gradient(to bottom, #ffeb3b, #3f51b5); /* Cambio de colores en el degradado a amarillo y azul */
+}
+
+#figura.gif{
+    background: url(../img/gift1.gif)center center no-repeat;
+    background-size: cover; 
+}
+
+#figura.luna {
+
+    background-color: #f44336; 
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8); 
+    position: relative; 
+}
+
+#figura.luna::before, #figura.luna::after {
+    content: '';
+    position: absolute;
+    background-color: #9c27b0; 
+    border-radius: 50%; 
+}
+  
+#figura.luna::before {
+    width: 40px; 
+    height: 40px;
+    top: 50px; 
+    left: 20px; 
+}
+  
+#figura.luna::after {
+    width: 30px; 
+    height: 30px; 
+    top: 100px; 
+    right: 40px; 
+}
+
+#figura.estrella {
+    border-bottom: 210px solid #2196f3; 
+    position: relative;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+#figura.triangulo {
+    background: #ff9800; 
+    width: 50;
+    height: 50;
+    border-left: 100px solid transparent; 
+    border-right: 110px solid transparent; 
+    border-bottom: 180px solid #f44336; 
+}
+
+#figura.top {
+    transform: translateY(-100px);
+}
+#figura.bottom {
+    transform: translateY(100px);
+}
+#figura.right{
+    transform: translateX(200px);
+}
+#figura.left{
+    transform: translateX(-200px);
+}
+#figura.diagional{
+    transform: translateY(-100px) translateX(200px);
+}
+
+body.fondo{
+    background-image: url(../img/fondo2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#panel-lateral{
+    width: 400px;
+    height: 100%;
+    position: absolute;
+    left: -450px;
+    top: 0;
+    z-index: 9 ;
+    background: #352caf;
+    transition: 1s;
+}
+    
+#panel-lateral.active{
+    left: 0;
+}
+
+#panel-lateral h2{
+    color: #000;
+    font-size: 40px;
+    padding: 40px 30px;
+}
+
+#panel-lateral ul{
+    width: 80%;
+    margin: 20px auto;
+}
+
+#panel-lateral ul a{
+    display: block;
+    padding: 20px;
+    background: #000;
+    color: #ffffff;
+    margin: 20px 0;
+    text-decoration: none;
+    font-size: 22px;
+    transition: .5s;
+}
+
+#panel-lateral ul a:hover{
+    border-radius: 20px;
+    background: #ffffff;
+    color: #000;
+}
+
+#panel-superior{
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: -400px;
+    z-index: 9;
+    background: #1b63e8;
+    transition: 1s;
+}
+
+#panel-superior.active{
+    top: 0;
+}
+
+#panel-superior h2{
+    font-size: 40px;
+}
